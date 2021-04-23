@@ -2,11 +2,12 @@
 # order Section
 --------------------------------------------------------------*/
 
-#form_b{
+#form_body{
     position: absolute;
     z-index: 1000;
     top: 100vh;
     height: 747px;
+	display: none;
 }
 
 #form_content{
@@ -54,7 +55,7 @@
 }
 
 
-.form-control{
+.my_control{
 	width: 85%;
 	display:block;
 }
