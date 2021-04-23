@@ -3,7 +3,6 @@
 	<head>
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-		<script src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
 		<link href="css/styles.css" rel="stylesheet">
 		<link href="css/order.css" rel="stylesheet">
 		
@@ -38,7 +37,7 @@
 						<h2>Original</h2>
 						<p>Tomato sauce, mozzarella and oregano</p>
 						<p>Kshs. 300</p>
-						<button onClick="getPizzaType()" name="original" id="original">Order</button>
+						<button onClick="getPizzaType()" name="original" id="original" class="order_btn">Order</button>
 					</div>
 				</div>
 				<div class="col-md-6 menu_box">
@@ -47,7 +46,7 @@
 						<h2>Salami</h2>
 						<p>Tomato sauce, mozzarella and mild salami</p>
 						<p>Kshs. 450</p>
-						<button onClick="getPizzaType()" name="salami">Order</button>
+						<button onClick="getPizzaType()" name="salami" class="order_btn">Order</button>
 					</div>
 				</div>
 			</div>
@@ -58,7 +57,7 @@
 						<h2>Chicken</h2>
 						<p>Tomato sauce, mozzarella, chicken, pineapple* and bbq sauce</p>
 						<p>Kshs. 700</p>
-						<button onClick="getPizzaType()" name="chicken">Order</button>
+						<button onClick="getPizzaType()" name="chicken" class="order_btn">Order</button>
 					</div>
 				</div>
 				<div class="col-md-6 menu_box">
@@ -67,7 +66,7 @@
 						<h2>Hawaiian</h2>
 						<p>Tomato sauce, mozzarella, ham and pineapple</p>
 						<p>Kshs. 450</p>
-						<button onClick="getPizzaType()" name="hawaiian">Order</button>
+						<button onClick="getPizzaType()" name="hawaiian" class="order_btn">Order</button>
 					</div>
 				</div>
 			</div>
@@ -75,88 +74,76 @@
 		</div>
 		
 		<!--  Order Section  -->
-		<div class="container-fluid" style="display: flex" id="form_body">
-			
-			<div class="col-md-9 mainBody container" id="form_content">
-			<div class="row">
-				<div class="col-md-10">
-					<div id="order_title">
-						<img src="img/placeholder.jpg" alt="" class="menu_images" id="placeholder">
-						<div class="menu_box_text">
-							<h2>(<span id="pizza_number">1</span>x) <span id="pizza_type">pizza type here</span></h2>
-							<p>Tomato sauce, mozzarella and oregano</p>
+		<div class="container-fluid" id="form_body">
+			<div style="display: flex">
+				<div class="col-md-9 mainBody container" id="form_content">
+					<div class="row">
+						<div class="col-md-10">
+							<div id="order_title">
+								<img src="img/placeholder.jpg" alt="" class="menu_images" id="placeholder">
+								<div class="menu_box_text">
+									<h2>(<span id="pizza_number">1</span>x) <span id="pizza_type">pizza type here</span></h2>
+									<p>Tomato sauce, mozzarella and oregano</p>
+								</div>
+							</div>
+
+							<hr>
+							<p id="custom_order_text">Customize your order</p>
+							<form id="frm">
+								<div class="order_details">
+									<div>
+										<label><h6>size:</h6></label>
+										<select name="size" class="form-control my_control">
+											<option value="small">Small</option>
+											<option value="Medium">Medium</option>
+											<option value="Large">Large</option>
+										</select>
+									</div>
+									<div>
+										<label><h6>Crust Type:</h6></label>
+										<select name="Type" class="form-control my_control"><br>
+											<option value="Chicken Barbercue">Chicken Barbercue</option>
+											<option value="Beef sauce">Beef sauce</option>
+											<option value="Mushroons">Mushroons</option>
+										</select>
+									</div>
+									<div>
+										<label><h6>Price</h6></label><br>
+										<input name="price" type="text"  placeholder="Price" class="form-control my_control"/>
+									</div>
+								</div>
+								<div class="order_details">
+									<div>
+										<label><h6>Quantity</h6></label>
+										<input name="qty" type="number" value="1" min="1" max="5" id="quantity" class="form-control my_control"/>
+									</div>
+								</div>
+							</form>
+							<div id="myButton">
+								<button type="submit" class="btn btn-success" style="margin-right: 10px">Add to cart</button>
+								<button id="view-order" class="btn btn-primary">View Order Summary</button>
+							</div> 
+
+						</div>
+						<div class="col-md-2" id="total_box">
+							<h4>Total: <span id="my_total">0</span></h4>
 						</div>
 					</div>
 
-					<hr>
-					<p id="custom_order_text">Customize your order</p>
-					<form>
-						<div class="order_details">
-							<div>
-								<label><h6>size:</h6></label>
-								<select class="form-control" id="pizza_size">
-									<option value="0">Regular <span class="prize_color">(+ Kshs.1500)</span></option>
-									<option value="350">Small (350)</option>
-									<option value="550">Medium (550)</option>
-									<option value="750">Large (750)</option>
-								</select>
-							</div>
-							<div>
-								<label><h6>Crust Type:</h6></label>
-								<select class="form-control" id="pizza_crust">
-									<option value="0"></option>
-									<option value="350">Crispy</option>
-									<option value="550">Stuffed</option>
-									<option value="750">Gluten-free</option>
-								</select>
-							</div>
-							<div>
-								<label><h6>Topping(s)</h6></label>
-								<select class="form-control" id="toppings">
-									<option value="0"></option>
-									<option value="350">Pepperoni</option>
-									<option value="550">Mushrooms</option>
-									<option value="750">Extra cheese</option>
-									<option value="750">Pineapple</option>
-								</select>
-							</div>
-						</div>
-						<div class="order_details">
-							<div>
-								<label><h6>How Many</h6></label>
-								<input type="number" id="quantity" name="quantity" min="1" max="5" class="form-control" value="1">
-							</div>
-							<div>
-								<label><h6>Delivered</h6></label>
-								<p>
-									<div class="form-check form-check-inline">
-										<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-										<label class="form-check-label" for="inlineRadio1">No</label>
-									</div>
-									<div class="form-check form-check-inline">
-										<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-										<label class="form-check-label" for="inlineRadio2">Yes</label>
-									</div>
-								</p>
-							</div>
-							<div id="delivery_message">
-								<label><h6>Delivery details:</h6></label>
-								<textarea id="frm_message" class="form-control" placeholder="Your message here..." style="height:50px" name="MMERGE2" required></textarea>
-							</div>
-						</div>
+					<p id="order-summary"></p>
+					<table class="table table-sm text-small">
+						<tr>
+							<th>Pizza</th><th>Size</th><th>QTY</th><th>Price</th><th>Total</th>
+						</tr>
+						<tbody id="our-order">
+						</tbody>
+						<tfoot class="text-right">
+							<tr class="text-right"><td colspan="4" id="total"></td></tr>
+						</tfoot>
+					</table>
 
-						<div id="myButton">
-							<button type="button" class="btn btn-primary" onClick="getUserData()">Confirm</button>
-						</div>
-
-					</form>
-				</div>
-				<div class="col-md-2" id="total_box">
-					<h4>Total: <span id="my_total">15000</span></h4>
-				</div>
 			</div>
-		</div>
-			
+			</div>
 		</div>
 		
 		
@@ -179,7 +166,7 @@
 					<input type="email" class="form-control" id="frm_mail" placeholder="Email..." name="EMAIL" required>
 				</div>
 				<div class="col-md-12">
-					<textarea id="frm_message" class="form-control" placeholder="Your message here..." style="height:300px" name="MMERGE2" required></textarea>
+					<textarea id="frm_message" class="form-control" placeholder="Your message here..." style="height:300px; width: 100%" name="MMERGE2" required></textarea>
 				</div>
 				<div class="col-md-12">
 					<button type="submit" class="btn btn-primary" onClick="getUserData()">Send</button>
@@ -205,7 +192,8 @@
 			<h5>Pizza Restaurant</h5>
 			<h5>2021</h5>
 		</footer>
-
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="js/jquery3.3.1.min.js"></script>
     <script src="js/scripts.js"></script>
 	</body>
 </html>
