@@ -62,6 +62,10 @@ $(document).ready(function(){
   	$(".order_btn").click(function() {
     	$("#form_body").toggle();
   	});
+	
+	$("#close_btn").click(function() {
+    	$("#form_body").toggle();
+  	});
 
     $("#pizza_size").change(function(){
         // Get selected option value from dropdown
