@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
+		<link href="css/styles.css" rel="stylesheet">
+		<link href="css/order.css" rel="stylesheet">
+		
+		<!-- Favicons -->
+  		<link href="img/favicon.png" rel="icon">
+		
+		<title>Pizza Restaurant</title>
+	</head>
+	<body>
+		<!--  Menu Section  -->
+		<div id="header">
+			<div id="header_text">
+				<img src="img/logo.png" alt="" id="header_img">
+				<h3>Home</h3>
+				<h3>Menu</h3>
+				<h3>Location</h3>
+				<h3>Contact Us</h3>
+			</div>
+			
+			<hr id="my_hr">
+			<div id="hero"></div>
+			
+		</div>
+		
+		<!--  Menu Section  -->
+		<div id="menu" class="container-fluid">
+			<h1 class="section_title"><strong>Menu</strong></h1>
+			<div class="menu_main_box">
+				<div class="col-md-6 menu_box">
+					<img src="img/original.jpg" alt="" class="menu_images">
+					<div class="menu_box_text">
+						<h2>Original</h2>
+						<p>Tomato sauce, mozzarella and oregano</p>
+						<p>Kshs. 300</p>
+						<button onClick="getPizzaType()" name="original" id="original">Order</button>
+					</div>
+				</div>
+				<div class="col-md-6 menu_box">
+					<img src="img/salami.jpg" alt="" class="menu_images">
+					<div class="menu_box_text">
+						<h2>Salami</h2>
+						<p>Tomato sauce, mozzarella and mild salami</p>
+						<p>Kshs. 450</p>
+						<button onClick="getPizzaType()" name="salami">Order</button>
+					</div>
+				</div>
+			</div>
+			<div class="menu_main_box">
+				<div class="col-md-6 menu_box">
+					<img src="img/chicken.jpg" alt="" class="menu_images">
+					<div class="menu_box_text">
+						<h2>Chicken</h2>
+						<p>Tomato sauce, mozzarella, chicken, pineapple* and bbq sauce</p>
+						<p>Kshs. 700</p>
+						<button onClick="getPizzaType()" name="chicken">Order</button>
+					</div>
+				</div>
+				<div class="col-md-6 menu_box">
+					<img src="img/hawaiian.jpg" alt="" class="menu_images">
+					<div class="menu_box_text">
+						<h2>Hawaiian</h2>
+						<p>Tomato sauce, mozzarella, ham and pineapple</p>
+						<p>Kshs. 450</p>
+						<button onClick="getPizzaType()" name="hawaiian">Order</button>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<!--  Order Section  -->
+		<div class="container-fluid" style="display: flex" id="form_body">
+			
+			<div class="col-md-9 mainBody container" id="form_content">
+			<div class="row">
+				<div class="col-md-10">
+					<div id="order_title">
+						<img src="img/placeholder.jpg" alt="" class="menu_images" id="placeholder">
+						<div class="menu_box_text">
+							<h2>(<span id="pizza_number">1</span>x) <span id="pizza_type">pizza type here</span></h2>
+							<p>Tomato sauce, mozzarella and oregano</p>
+						</div>
+					</div>
+
+					<hr>
+					<p id="custom_order_text">Customize your order</p>
+					<form>
+						<div class="order_details">
+							<div>
+								<label><h6>size:</h6></label>
+								<select class="form-control" id="pizza_size">
+									<option value="0">Regular <span class="prize_color">(+ Kshs.1500)</span></option>
+									<option value="350">Small (350)</option>
+									<option value="550">Medium (550)</option>
+									<option value="750">Large (750)</option>
+								</select>
+							</div>
+							<div>
+								<label><h6>Crust Type:</h6></label>
+								<select class="form-control" id="pizza_crust">
+									<option value="0"></option>
+									<option value="350">Crispy</option>
+									<option value="550">Stuffed</option>
+									<option value="750">Gluten-free</option>
+								</select>
+							</div>
+							<div>
+								<label><h6>Topping(s)</h6></label>
+								<select class="form-control" id="toppings">
+									<option value="0"></option>
+									<option value="350">Pepperoni</option>
+									<option value="550">Mushrooms</option>
+									<option value="750">Extra cheese</option>
+									<option value="750">Pineapple</option>
+								</select>
+							</div>
+						</div>
+						<div class="order_details">
+							<div>
+								<label><h6>How Many</h6></label>
+								<input type="number" id="quantity" name="quantity" min="1" max="5" class="form-control" value="1">
+							</div>
+							<div>
+								<label><h6>Delivered</h6></label>
+								<p>
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+										<label class="form-check-label" for="inlineRadio1">No</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+										<label class="form-check-label" for="inlineRadio2">Yes</label>
+									</div>
+								</p>
+							</div>
+							<div id="delivery_message">
+								<label><h6>Delivery details:</h6></label>
+								<textarea id="frm_message" class="form-control" placeholder="Your message here..." style="height:50px" name="MMERGE2" required></textarea>
+							</div>
+						</div>
+
+						<div id="myButton">
+							<button type="button" class="btn btn-primary" onClick="getUserData()">Confirm</button>
+						</div>
+
+					</form>
+				</div>
+				<div class="col-md-2" id="total_box">
+					<h4>Total: <span id="my_total">15000</span></h4>
+				</div>
+			</div>
+		</div>
+			
+		</div>
+		
+		
+		<!--  Map Section  -->
+		<div id="map">
+			<h1  class="section_title">Location</h1>
+			<div id="map_box">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127641.17042363613!2d36.777356922177916!3d-1.3030363545696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1172d84d49a7%3A0xf7cf0254b297924c!2sNairobi!5e0!3m2!1sen!2ske!4v1619040339856!5m2!1sen!2ske" width="1000" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+			</div>
+		</div>
+
+		<!--  Contact Section  -->
+		<div id="contact">
+			<h1  class="section_title"><strong>CONTACT US</strong></h1>
+			<form id="contact_form" class="container" action="https://moringaschool.us1.list-manage.com/subscribe/post?u=af64375ecf23f81880231855c&amp;id=6d8ee05978" method="post">
+				<div class="col-md-6">
+					<input type="text" class="form-control" id="frm_name" placeholder="Name..." name="FNAME" required>
+				</div>
+				<div class="col-md-6">
+					<input type="email" class="form-control" id="frm_mail" placeholder="Email..." name="EMAIL" required>
+				</div>
+				<div class="col-md-12">
+					<textarea id="frm_message" class="form-control" placeholder="Your message here..." style="height:300px" name="MMERGE2" required></textarea>
+				</div>
+				<div class="col-md-12">
+					<button type="submit" class="btn btn-primary" onClick="getUserData()">Send</button>
+				</div>
+			</form>
+		</div>
+		
+		<!--  icons Section  -->
+		<div id="icons">
+			<a href="https://twitter.com" target="_blank"><img src="assets/social_icons/twitter.png" alt="" ></a>
+			<a href="https://dribble.com" target="_blank"><img src="assets/social_icons/dribble.png" alt=""></a>
+			<a href="https://facebook.com" target="_blank"><img src="assets/social_icons/facebook.png" alt=""></a>
+			<a href="https://myaccount.google.com" target="_blank"><img src="assets/social_icons/g_plus.png" alt=""></a>
+			<a href="https://skype.com" target="_blank"><img src="assets/social_icons/skype.png" alt=""></a>
+			<a href="https://stumbleupon.com" target="_blank"><img src="assets/social_icons/stumble_upon.png" alt=""></a>
+			<a href="https://behance.net" target="_blank"><img src="assets/social_icons/behance.png" alt=""></a>
+			<a href="https://pinterest.com" target="_blank"><img src="assets/social_icons/pinterest.png" alt=""></a>
+			<a href="https://flickr.com" target="_blank"><img src="assets/social_icons/flickr.png" alt=""></a>
+		</div>
+		
+		<!--  footer Section  -->
+		<footer id="footer">
+			<h5>Pizza Restaurant</h5>
+			<h5>2021</h5>
+		</footer>
+
+    <script src="js/scripts.js"></script>
+	</body>
+</html>

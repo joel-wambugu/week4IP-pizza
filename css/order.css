@@ -1,0 +1,89 @@
+/*--------------------------------------------------------------
+# order Section
+--------------------------------------------------------------*/
+
+#form_b{
+    position: absolute;
+    z-index: 1000;
+    top: 100vh;
+    height: 747px;
+}
+
+#form_content{
+	background-color: #FFFFFF
+}
+
+.menu_images{
+	width: 255px;
+	height: 249px;
+	object-fit: cover;
+}
+
+.mainBody{
+	border: 2px solid #7C7C7C;
+	border-radius: 10px;
+	margin-top: 30px;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 30px;
+	box-shadow: 0 0 24px 0 #212529;
+}
+
+#order_title{
+	display: flex
+}
+
+.menu_box_text2{
+	width: fit-content;
+    margin-left: 160px;
+}
+
+#custom_order_text, .menu_box_text{
+
+	text-align: center; 
+}
+
+.order_details{
+	display: grid;
+	grid-template-columns: 350px 350px 400px;
+	margin: 30px 0;
+}
+
+.prize_color{
+	color: red;
+}
+
+
+.form-control{
+	width: 85%;
+	display:block;
+}
+
+#delivery_message{
+	display: none;
+}
+
+#myButton{
+	margin-top: 30px;
+	margin-right: auto;
+	margin-left: auto;
+	width: fit-content;
+}
+
+.alert{
+	margin-top: 30px;
+}
+
+#replyMessage, #denyMessage{
+	display: none;
+}
+
+#total_box{
+	border: 2px solid #7C7C7C;
+	border-radius: 10px;
+	margin-top: 30px;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 30px;
+	text-align: center;
+}

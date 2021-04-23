@@ -1,0 +1,162 @@
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #272829;
+	    
+}
+
+.section_title{
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+# header Section
+--------------------------------------------------------------*/
+#header{
+	height: 100vh;
+}
+
+#header_img{
+	height: 60px;
+	margin: 20px 50px 0 0;
+}
+
+#header_text{
+	display: flex;
+	width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#header_text h3 {
+	padding: 30px 20px;
+	color: white;
+}
+
+#hero{
+	width: 100%;
+	height: 100vh;
+	background: url("../img/03.jpg")  center;
+	background-size: cover;
+	position: absolute;
+  	top: 0px;
+	z-index: -1;
+	
+}
+
+#my_hr{
+	position: absolute;
+	width: 100%;
+	top: 70px;
+}
+
+
+/*--------------------------------------------------------------
+# Menu Section
+--------------------------------------------------------------*/
+#menu{
+	background-color: #e5e5e5;
+}
+
+.menu_main_box{
+	width: fit-content;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+.menu_images{
+	width: 255px;
+	height: 249px;
+	object-fit: cover;
+}
+
+.menu_box{
+	width: 555px;
+	height: auto;
+	background-color: white;
+	padding: 30px 0 30px 30px;
+	margin: 15px;
+	display: flex;
+}
+
+.menu_box_text{
+	padding: 0 25px;
+}
+
+/*--------------------------------------------------------------
+# Map Section
+--------------------------------------------------------------*/
+#map{
+	background-color: white;
+	padding: 30px;
+}
+
+#map_box{
+	width: fit-content;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+/*--------------------------------------------------------------
+# Contact Section
+--------------------------------------------------------------*/
+
+
+#contact{
+	width: 100%;
+	height: 683px;
+	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),  url("../img/03.jpg")  center;
+	background-size: cover;
+	text-align: center;
+	padding: 50px 0;
+}
+
+
+#contact h1{
+	color: white;
+}
+
+#contact_form div{
+	margin-top: 20px;
+}
+
+#contact_form input, #contact_form textarea{
+	color: white;
+	background: rgba(0,0,0,0.15);
+	border: 1px solid #FFFFFF;
+}
+
+#contact_form button{
+	width: 150px;
+	background: rgba(2,72,155,0.60);
+}
+
+
+/*--------------------------------------------------------------
+# icons Section
+--------------------------------------------------------------*/
+
+#icons{
+	text-align: center;
+	padding: 50px 0;
+}
+
+#icons img {
+	padding: 0 10px;
+}
+
+
+
+/*--------------------------------------------------------------
+# footer Section
+--------------------------------------------------------------*/
+
+#footer{
+	text-align: center;
+}
+
+
+/*--------------------------------------------------------------
+# order Section
+--------------------------------------------------------------*/

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+	  <title>My Portfolio</title>
+	  <!-- Main CSS File -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
+		<link href="css/order.css" rel="stylesheet">
+		
+		<!-- Favicons -->
+  		<link href="img/favicon.png" rel="icon">
+	</head>
+	<body>
+		
+		<div class="col-md-9 mainBody container">
+			<div class="row">
+				<div class="col-md-10">
+					<div id="order_title">
+						<img src="img/placeholder.jpg" alt="" class="menu_images" id="placeholder">
+						<div class="menu_box_text">
+							<h2>(<span id="pizza_number">1</span>x) Original</h2>
+							<p>Tomato sauce, mozzarella and oregano</p>
+						</div>
+					</div>
+
+					<hr>
+					<p id="custom_order_text">Customize your order</p>
+					<form>
+						<div class="order_details">
+							<div>
+								<label><h6>size:</h6></label>
+								<select class="form-control" id="pizza_size">
+									<option value="0">Regular <span class="prize_color">(+ Kshs.1500)</span></option>
+									<option value="350">Small (350)</option>
+									<option value="550">Medium (550)</option>
+									<option value="750">Large (750)</option>
+								</select>
+							</div>
+							<div>
+								<label><h6>Crust Type:</h6></label>
+								<select class="form-control" id="pizza_crust">
+									<option value="0"></option>
+									<option value="350">Crispy</option>
+									<option value="550">Stuffed</option>
+									<option value="750">Gluten-free</option>
+								</select>
+							</div>
+							<div>
+								<label><h6>Topping(s)</h6></label>
+								<select class="form-control" id="toppings">
+									<option value="0"></option>
+									<option value="350">Crispy</option>
+									<option value="550">Stuffed</option>
+									<option value="750">Gluten-free</option>
+								</select>
+							</div>
+						</div>
+						<div class="order_details">
+							<div>
+								<label><h6>How Many</h6></label>
+								<input type="number" id="quantity" name="quantity" min="1" max="5" class="form-control">
+							</div>
+							<div>
+								<label><h6>Delivered</h6></label>
+								<p>
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+										<label class="form-check-label" for="inlineRadio1">Yes</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+										<label class="form-check-label" for="inlineRadio2">No</label>
+									</div>
+								</p>
+							</div>
+							<div>
+								<label><h6>Delivery details:</h6></label>
+								<textarea id="frm_message" class="form-control" placeholder="Your message here..." style="height:50px" name="MMERGE2" required></textarea>
+							</div>
+						</div>
+
+						<div id="myButton">
+							<button type="button" class="btn btn-primary" onClick="getUserData()">Confirm</button>
+						</div>
+
+					</form>
+				</div>
+				<div class="col-md-2" id="total_box">
+					<h4>Total: <span id="my_total">15000</span></h4>
+				</div>
+			</div>
+		</div>
+		<div id="replyMessage">
+				<div class="alert alert-success">
+					<span>You were born on <strong id="weekDay"></strong>, hence your Akan name is <strong id="ghanaName"></strong> </span>
+				</div>
+			</div>
+			
+			<div id="denyMessage">
+				<div class="alert alert-danger">
+					<span><strong>Enter all fields</strong></span>
+				</div>
+			</div>
+		  <!-- Main JS File -->
+  		<script src="js/scripts.js"></script>
+	</body>
+</html>

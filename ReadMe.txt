@@ -1,0 +1,1 @@
+The toggle() method toggles between hide() and show() for the selected elements.
